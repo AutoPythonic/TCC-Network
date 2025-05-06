@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>TCC Network Automation Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>TCC Network</h1>
+            </div>
+            <p class="tagline">Automation Services</p>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="service-status">
+                <h2>Service Status</h2>
+                <p class="last-updated"><i class="fas fa-clock"></i> Last updated: <span id="lastUpdated">May 6, 2025</span></p>
+                
+                <div class="status-cards">
+                    <div class="status-card">
+                        <div class="status-header">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>Referral System</h3>
+                        </div>
+                        <div class="status-indicator" id="referralSystemIndicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text" id="referralSystemText">Loading...</span>
+                        </div>
+                        <p class="status-description">Automatic referral generation tool</p>
+                        <div class="service-action" id="referralSystemAction">
+                            <!-- Button will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-header">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Task Automation</h3>
+                        </div>
+                        <div class="status-indicator" id="automationScriptIndicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text" id="automationScriptText">Loading...</span>
+                        </div>
+                        <p class="status-description">Daily task automation script</p>
+                        <div class="service-action" id="automationScriptAction">
+                            <!-- Button will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing">
+                <h2>Pricing Plans</h2>
+                
+                <div class="plan-cards">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Starter</h3>
+                            <div class="price">Free</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> 10 Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> Free automation (with group/channel join)</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> Must remain in our Telegram group & channel</div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Starter Plus</h3>
+                            <div class="price">₹99 / $0.99 USDT</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> 20 Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> 30 tokens</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> Entry-level paid plan</div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Standard</h3>
+                            <div class="price">₹399 / $3.99 USDT</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> 100 Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> 1st Month: Unlimited</div>
+                            <div class="feature"><i class="fas fa-check"></i> 2nd Month: 40 tokens</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> Affordable for regular users</div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <div class="popular-tag">Popular</div>
+                        <div class="plan-header">
+                            <h3>Pro</h3>
+                            <div class="price">₹999 / $9.99 USDT</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> 250 Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> 1st Month: Unlimited</div>
+                            <div class="feature"><i class="fas fa-check"></i> 2nd Month: 65 tokens</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> Most popular plan</div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Advanced</h3>
+                            <div class="price">₹1999 / $19.99 USDT</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> 600 Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> 1st Month: Unlimited</div>
+                            <div class="feature"><i class="fas fa-check"></i> 2nd Month: 100 tokens</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> For serious users</div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Unlimited</h3>
+                            <div class="price">₹3000 / $29.99 USDT</div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature"><i class="fas fa-check"></i> Unlimited Referrals</div>
+                            <div class="feature"><i class="fas fa-check"></i> Unlimited tokens</div>
+                            <div class="feature note"><i class="fas fa-info-circle"></i> Best value for power users</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="payment-support">
+                <h2>Payment & Support</h2>
+                
+                <div class="payment-support-container">
+                    <div class="payment-methods">
+                        <h3>Payment Methods</h3>
+                        <div class="payment-option">
+                            <div class="payment-option-header">
+                                <i class="fab fa-bitcoin"></i>
+                                <h4>USDT (BEP20) – Preferred method</h4>
+                            </div>
+                            <div class="payment-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Wallet Address:</span>
+                                    <code>0x66a244477b75641fe98e8dc89767bf6a1695a60f</code>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Binance ID:</span>
+                                    <code>1079551622</code>
+                                </div>
+                                <div class="detail-item warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Only send USDT via BNB Smart Chain (BEP20). Do not send NFTs or unsupported tokens.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <div class="payment-option-header">
+                                <i class="fas fa-rupee-sign"></i>
+                                <h4>UPI – For users who cannot pay via crypto</h4>
+                            </div>
+                            <div class="payment-details">
+                                <div class="detail-item">
+                                    <span>UPI ID to be provided upon request</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmation-process">
+                        <h3>Payment Confirmation</h3>
+                        <p>After making a payment, send a screenshot of the transaction along with your registered email to confirm.</p>
+                        
+                        <div class="contact-methods">
+                            <h4>Send payment proof via:</h4>
+                            <div class="contact-options">
+                                <a href="https://Telegram.me/Hitachi2006" target="_blank" class="contact-option">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>@Hitachi2006</span>
+                                </a>
+                                <a href="https://Telegram.me/Anicom_Admin" target="_blank" class="contact-option">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>@Anicom_Admin</span>
+                                </a>
+                                <a href="https://wa.me/8348430947" target="_blank" class="contact-option">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>8348430947</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-addition">
+                            <h4>Manual Credit Addition</h4>
+                            <p>Once payment is confirmed, our team will manually verify and add credits to your account.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <p class="copyright"> 2025 TCC Network Automation</p>
+        </footer>
+    </div>
+
+    <script>
+        const yearElement = document.getElementById('year');
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

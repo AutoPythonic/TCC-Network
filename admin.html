@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC Network Admin Panel</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="login-container" id="loginContainer">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fas fa-lock"></i>
+                    <h1>Admin Login</h1>
+                </div>
+                <div class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter admin username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter admin password">
+                    </div>
+                    <button id="loginButton" class="login-button">Login</button>
+                    <p id="loginError" class="login-error"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-panel" id="adminPanel" style="display: none;">
+            <header class="admin-header">
+                <div class="admin-logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>TCC Network Admin</h1>
+                </div>
+                <button id="logoutButton" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </header>
+
+            <main class="admin-main">
+                <section class="admin-section">
+                    <h2>Service Status Control</h2>
+                    <p class="admin-info">Toggle services between Live and Offline status. Changes will be immediately reflected on the website.</p>
+                    
+                    <div class="service-controls">
+                        <div class="service-control-card">
+                            <div class="service-info">
+                                <i class="fas fa-sync-alt"></i>
+                                <h3>Referral System Bypass Tool</h3>
+                            </div>
+                            <div class="service-toggle">
+                                <label class="switch">
+                                    <input type="checkbox" id="referralSystemStatus" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="status-label" id="referralSystemLabel">Live</span>
+                            </div>
+                            <p class="service-note">Note: This service will show "Contact Admin for Access" button when Live.</p>
+                        </div>
+                        
+                        <div class="service-control-card">
+                            <div class="service-info">
+                                <i class="fas fa-tasks"></i>
+                                <h3>Daily Task Automation Script</h3>
+                            </div>
+                            <div class="service-toggle">
+                                <label class="switch">
+                                    <input type="checkbox" id="automationScriptStatus">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="status-label" id="automationScriptLabel">Offline</span>
+                            </div>
+                            <div class="service-url">
+                                <span>Service URL:</span>
+                                <code>https://srzdl648-5000.inc1.devtunnels.ms/</code>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-actions">
+                        <button id="saveStatusButton" class="action-button primary">
+                            <i class="fas fa-save"></i> Save Status Changes
+                        </button>
+                        <div id="statusMessage" class="status-message" style="display: none;"></div>
+                        <div id="jsonOutput" class="json-output"></div>
+                    </div>
+                </section>
+
+                <section class="admin-section">
+                    <h2>Last Updated</h2>
+                    <div class="last-updated-info">
+                        <p>Status last changed: <span id="lastUpdatedTime">May 6, 2025 - 18:00</span></p>
+                        <button id="updateTimestampButton" class="update-button">
+                            <i class="fas fa-sync"></i> Update Timestamp
+                        </button>
+                    </div>
+                </section>
+                
+                <section class="admin-section">
+                    <h2>GitHub Pages Instructions</h2>
+                    <div class="github-instructions">
+                        <p>Since this site is hosted on GitHub Pages, you need to manually update the status.json file in your repository:</p>
+                        <ol>
+                            <li>Make your changes using the toggles above</li>
+                            <li>Click "Save Status Changes" to generate the updated JSON</li>
+                            <li>Copy the generated JSON</li>
+                            <li>Update the <code>data/status.json</code> file in your GitHub repository with this content</li>
+                            <li>Commit and push the changes to your repository</li>
+                            <li>Wait a few minutes for GitHub Pages to update (typically 1-2 minutes)</li>
+                        </ol>
+                        <p class="note">Note: All users will see the updated status after GitHub Pages refreshes your site.</p>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="admin-footer">
+                <p>&copy; <span id="year">2025</span> TCC Network Admin Panel</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
